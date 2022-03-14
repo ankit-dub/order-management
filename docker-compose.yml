@@ -1,0 +1,15 @@
+version: "3"
+services:
+  carddbserver:
+    image: "postgres:13.1"
+    container_name: "localpostgres-oms"
+    environment:
+      POSTGRES_USER: mwyn
+      POSTGRES_PASSWORD: nywm
+      POSTGRES_DB: oms
+      LC_COLLATE: en_US.utf8
+      LC_CTYPE: en_US.utf8
+      ENCODING: UTF8
+      TEMPLATE: template0
+    ports:
+      - "5432:5432"
