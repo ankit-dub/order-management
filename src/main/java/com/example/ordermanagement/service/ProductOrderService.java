@@ -56,6 +56,7 @@ public class ProductOrderService {
     }
 
     public Map<String, String> createProductOrder(ProductOrderRequest productOrder) {
+//check if product available
         return Collections.singletonMap("productOrderId", this.orderRepository.save(ProductOrderMapper.dtoToEntity(productOrder)).getProductOrderId().toString());
     }
 
